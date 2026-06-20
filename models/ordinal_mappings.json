@@ -1,0 +1,37 @@
+{
+  "Parental_Involvement": [
+    "Low",
+    "Medium",
+    "High"
+  ],
+  "Access_to_Resources": [
+    "Low",
+    "Medium",
+    "High"
+  ],
+  "Motivation_Level": [
+    "Low",
+    "Medium",
+    "High"
+  ],
+  "Family_Income": [
+    "Low",
+    "Medium",
+    "High"
+  ],
+  "Teacher_Quality": [
+    "Low",
+    "Medium",
+    "High"
+  ],
+  "Parental_Education_Level": [
+    "High School",
+    "College",
+    "Postgraduate"
+  ],
+  "Distance_from_Home": [
+    "Near",
+    "Moderate",
+    "Far"
+  ]
+}
