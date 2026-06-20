@@ -5,7 +5,7 @@ from study habits, attendance, and other contributing factors — built and depl
 as a portfolio project demonstrating the full ML lifecycle, from raw data to a
 live web application.
 
-**🔗 Live App:** [your-app-name.streamlit.app](https://your-app-name.streamlit.app)
+**🔗 Live App:** [https://student-exam-score--prediction-0222.streamlit.app/)
 
 ---
 
@@ -193,6 +193,6 @@ streamlit run app/app.py
 
 ## 👤 Author
 
-*[Your name]* — *[LinkedIn]* · *[GitHub]* · *[Portfolio site, if any]*
+*[Muppidathi]* — *[www.linkedin.com/in/muppidathi01]* 
 
 
