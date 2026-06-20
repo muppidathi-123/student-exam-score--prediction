@@ -16,20 +16,24 @@ st.set_page_config(
     layout="centered"
 )
 
+# --- Resolve absolute paths relative to this file ---
+APP_DIR = os.path.dirname(os.path.abspath(__file__))
+MODELS_DIR = os.path.abspath(os.path.join(APP_DIR, "..", "models"))
+
 @st.cache_resource
 def load_artifacts():
-    model_files = [f for f in glob.glob('../models/*_model.pkl') if os.path.exists(f) and os.path.getsize(f) > 0]
+    model_files = [f for f in glob.glob(os.path.join(MODELS_DIR, '*_model.pkl')) if os.path.exists(f) and os.path.getsize(f) > 0]
     if not model_files:
         st.error("No model file found in /models. Run Phase 6 first.")
         st.stop()
 
     model = joblib.load(model_files[0])
-    scaler = joblib.load('../models/scaler.pkl')
+    scaler = joblib.load(os.path.join(MODELS_DIR, 'scaler.pkl'))
 
-    with open('../models/ordinal_mappings.json', 'r') as f:
+    with open(os.path.join(MODELS_DIR, 'ordinal_mappings.json'), 'r') as f:
         ordinal_mappings = json.load(f)
 
-    with open('../models/training_columns.json', 'r') as f:
+    with open(os.path.join(MODELS_DIR, 'training_columns.json'), 'r') as f:
         training_columns = json.load(f)
 
     model_name = os.path.basename(model_files[0]).replace('_model.pkl', '')
